@@ -1,0 +1,66 @@
+\documentclass[12pt,letterpaper,usenames,dvipsnames]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{tikz}
+\usepackage{xcolor}
+\colorlet{border}{black}
+\colorlet{xaxis}{black}
+\colorlet{yaxis}{black!15}
+%nohead,top=1cm,marginparsep=1.5em,footskip=1em,left=1cm,marginparwidth=6cm,bottom=4.5744cm,textwidth=13cm
+\usepackage[showframe=false,margin=1cm,nohead,nofoot,nomarginpar]{geometry}
+\pagestyle{empty}
+\newcounter{example}
+\newcommand{\draw}[2]{
+	\begin{tikzpicture}
+	\draw[borde] (0,0) -- (0.5*#1,0) -- (0.5*#1,0.5*#2) -- (0,0.5*#2) -- (0,0);
+	\foreach \y in {1,...,#2} {
+		\ifnum\y<#2%
+			\draw[xaxis] (0,\y*0.5) -- (0.5*#1,\y*0.5);%
+		\fi%
+	}
+	\foreach \x in {1,...,#1} {
+		\ifnum\x<#1%
+			\draw[yaxis] (\x*0.5,0) -- (\x*0.5,0.5*#2);%
+		\fi%
+	}
+	\end{tikzpicture}
+}
+\newcommand{\main}[4]{
+\setcounter{example}{\numexpr14+#1\relax}
+\noindent
+\begin{flushleft}
+	\ifnum #4=0%
+		\draw{12}{#2}\hfill\draw{#1}{#2}
+	\fi%
+	\ifnum #4=1%
+		\draw{#1}{#2}\hfill\draw{12}{#2}
+	\fi%
+\end{flushleft}
+\vspace{#3}
+\begin{center}
+	\draw{\theexample}{10}
+\end{center}
+}
+\newcommand{\twosides}[3]{
+	\newlength{\spce}
+	\ifnum #3=0%
+		\setlength{\spce}{0.5ex}
+	\fi%
+	\ifnum #3=1%
+		\setlength{\spce}{0.5cm}
+	\fi%
+	\ifnum #3=2%
+		\setlength{\spce}{0.8ex}
+	\fi%
+	\ifnum #3=3%
+		\setlength{\spce}{1.5ex}
+	\fi%
+	\main{#1}{#2}{\spce}{1}
+	\newpage
+	\main{#1}{#2}{\spce}{0}
+}
+\begin{document}
+	  \twosides{25}{40}{1}%portrait-letter
+	  %\twosides{38}{27}{0}%landscape-letter
+	  %\twosides{41}{26}{1}%landscape-a4
+	  %\twosides{24}{43}{2}%portrait-a4
+\end{document}
