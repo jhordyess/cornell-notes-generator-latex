@@ -60,6 +60,10 @@ My `settings.json` configuration file was:
 
 To have more control for lengths, rows, columns, use portrait or landscape, view in letter or A4 size, single sided or double sided, and so on; I'll create a web project with [React](https://reactjs.org/) and [React-pdf](https://react-pdf.org/), to configurte the creation PDF file 😶.
 
+## Update 2022
+
+Here is the project developed with [React](https://reactjs.org/): [https://github.com/jhordyess/cornell-notes-generator](https://github.com/jhordyess/cornell-notes-generator) 🤓, and online: (https://jhordyess.github.io/cornell-notes-generator/)[https://jhordyess.github.io/cornell-notes-generator/] 🌐.
+
 ---
 
-@2021 Jhordyess
+@2022 Jhordyess
