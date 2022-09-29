@@ -28,6 +28,10 @@ To have more control for lengths, rows, columns, use portrait or landscape, view
 
 Here is the project developed with React: [https://github.com/jhordyess/cornell-notes-generator](https://github.com/jhordyess/cornell-notes-generator) 🤓, and online: [https://jhordyess.github.io/cornell-notes-generator/](https://jhordyess.github.io/cornell-notes-generator/) 🌐.
 
+## License
+
+© 2022 [Jhordyess](https://github.com/jhordyess). Under the [MIT](https://choosealicense.com/licenses/mit/) license.
+
 ---
 
-@2022 Jhordyess
+Made with 💪 by [Jhordyess](https://www.jhordyess.com/)
